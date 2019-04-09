@@ -77,7 +77,31 @@ class SocialGraph:
         friendships.append([userID])
         print(friendships)
 
-        
+        while friendships:
+            list_of_friends = friendships.pop(0)
+            copied_friendships = list_of_friends.copy()
+            # current user
+            node = list_of_friends.pop()
+            # friends of current user we are seeing
+            print(sg.friendships[node])
+            if len(sg.friendships[node]) is 0:
+                visited[node] = friends_of_user
+            else:
+                friends_of_user = list(sg.friendships[node])
+
+                visited[node] = friends_of_user
+
+                for i in friends_of_user:
+                    if i in visited or i in friendships:
+                        pass
+                    else:
+                        copy_list = copied_friendships.copy()
+                        copy_list.append(i)
+                        friendships.append(copy_list)
+
+    
+
+
         return visited
 
 
