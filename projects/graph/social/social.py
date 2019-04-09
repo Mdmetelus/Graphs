@@ -72,6 +72,12 @@ class SocialGraph:
         """
         visited = {}  # Note that this is a dictionary, not a set
         # !!!! IMPLEMENT ME
+        friendships = []
+
+        friendships.append([userID])
+        print(friendships)
+
+        
         return visited
 
 
