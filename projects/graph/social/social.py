@@ -99,9 +99,6 @@ class SocialGraph:
                         copy_list.append(i)
                         friendships.append(copy_list)
 
-    
-
-
         return visited
 
 
